@@ -81,14 +81,6 @@ Formik is made with <3 thanks to these wonderful people
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | [<img src="https://avatars0.githubusercontent.com/u/13765558?v=4" width="100px;"/><br /><sub><b>Jon Tansey</b></sub>](http://jon.tansey.info)<br />[🐛](https://github.com/jaredpalmer/formik/issues?q=author%3Ajontansey "Bug reports") [💻](https://github.com/jaredpalmer/formik/commits?author=jontansey "Code") | [<img src="https://avatars0.githubusercontent.com/u/6819171?v=4" width="100px;"/><br /><sub><b>Tyler Martinez</b></sub>](http://slightlytyler.com)<br />[🐛](https://github.com/jaredpalmer/formik/issues?q=author%3Aslightlytyler "Bug reports") [📖](https://github.com/jaredpalmer/formik/commits?author=slightlytyler "Documentation") | [<img src="https://avatars0.githubusercontent.com/u/1285032?v=4" width="100px;"/><br /><sub><b>Tobias Lohse</b></sub>](http://MrLoh.se)<br />[🐛](https://github.com/jaredpalmer/formik/issues?q=author%3AMrLoh "Bug reports") [💻](https://github.com/jaredpalmer/formik/commits?author=MrLoh "Code") |
 
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the
-[all-contributors](https://github.com/kentcdodds/all-contributors)
-specification. Contributions of any kind welcome!
-
----
-
 [MIT License.](https://github.com/jaredpalmer/formik/blob/master/LICENSE)
 
 ---
