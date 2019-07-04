@@ -5,6 +5,7 @@ import { FormikConsumer } from 'formik';
 import AsyncValidation from '../examples/AsyncValidation';
 import Arrays from '../examples/Arrays';
 import Basic from '../examples/Basic.js';
+import Basic2 from '../examples/Basic2.js';
 import CustomInputs from '../examples/CustomInputs';
 import ErrorMessage from '../examples/ErrorMessage';
 import FastField from '../examples/FastField';
@@ -95,9 +96,9 @@ storiesOf('Example', module)
     return (
       <div className="formik-example">
         <main>
-          <Basic />
+          <Basic2 />
         </main>
-        <Code>{cleanExample(BasicCode)}</Code>
+        <Code>{cleanExample(BasicCode2)}</Code>
       </div>
     );
   })
