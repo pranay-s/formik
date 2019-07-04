@@ -19,6 +19,7 @@ const AsyncValidationCode = require('!raw-loader!../examples/AsyncValidation')
   .default;
 const ArraysCode = require('!raw-loader!../examples/Arrays').default;
 const BasicCode = require('!raw-loader!../examples/Basic.js').default;
+const BasicCode2 = require('!raw-loader!../examples/Basic2.js').default;
 const DebouncedAutoSaveCode = require('!raw-loader!../examples/DebouncedAutoSave.js')
   .default;
 const CustomInputsCode = require('!raw-loader!../examples/CustomInputs')
@@ -81,6 +82,16 @@ const Code = props => (
 
 storiesOf('Example', module)
   .add('Basic', () => {
+    return (
+      <div className="formik-example">
+        <main>
+          <Basic />
+        </main>
+        <Code>{cleanExample(BasicCode)}</Code>
+      </div>
+    );
+  })
+  .add('Basic2', () => {
     return (
       <div className="formik-example">
         <main>
