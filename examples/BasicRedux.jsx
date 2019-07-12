@@ -17,8 +17,11 @@ const Input = ({label, type=`text`, id, input, ...restProps}) => {
 const getFields = (i) => {
   return (
     <React.Fragment>
+      <label htmlFor={`${i}firstName`}>First Name</label>
       <FieldWrapper id={`${i}firstName`} name={`${i}firstName`} placeholder="John" component={Input}/>
+      <label htmlFor={`${i}lastName`}>Last Name</label>
       <FieldWrapper id={`${i}lastName`} name={`${i}lastName`} placeholder="Doe" component={Input}/>
+      <label htmlFor={`${i}email`}>Email</label>
       <FieldWrapper id={`${i}email`} name={`${i}email`} placeholder="john@acme.com" type="email" component={Input}/>
     </React.Fragment>
   );
