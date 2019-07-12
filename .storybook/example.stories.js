@@ -82,7 +82,7 @@ const Code = props => (
 );
 
 storiesOf('Example', module)
-  .add('Basic', () => {
+  .add('Basic-Formik', () => {
     return (
       <div className="formik-example">
         <main>
@@ -92,7 +92,7 @@ storiesOf('Example', module)
       </div>
     );
   })
-  .add('Basic2', () => {
+  .add('Basic-Redux', () => {
     return (
       <div className="formik-example">
         <main>
