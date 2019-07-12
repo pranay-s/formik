@@ -1,28 +1,41 @@
 import React from 'react';
-import { Formik, Field, Form } from 'formik';
-import { Debug } from './Debug';
+import { Formik, FastField, Form } from 'formik';
+
+class FieldsForm extends React.PureComponent {
+  constructor(props) {
+    super(props);
+  }
+  render(){
+    const {i} = this.props;
+    return (
+    <div key={i}>
+      <label htmlFor={`${i}firstName`}>First Name</label>
+      <FastField name={`${i}firstName`} placeholder="Jane" />
+
+      <label htmlFor={`${i}lastName`}>Last Name</label>
+      <FastField name={`${i}lastName`} placeholder="Doe" />
+
+      <label htmlFor={`${i}email`}>Email</label>
+      <FastField name={`${i}email`} placeholder="jane@acme.com" type="email" />
+    </div>
+    );
+  }
+}
 const getFields = (i) => {
   return (
-    <React.Fragment>
-    <label htmlFor={`${i}firstName`}>First Name</label>
-    <Field name={`${i}firstName`} placeholder="Jane" />
-`
-    <label htmlFor={`${i}lastName`}>Last Name</label>
-    <Field name={`${i}lastName`} placeholder="Doe" />
-
-    <label htmlFor={`${i}email`}>Email</label>
-    <Field name={`${i}email`} placeholder="jane@acme.com" type="email" />
-    </React.Fragment>
+    <FieldsForm i = {i}/>
   );
 }
 const getMultipleFileds = () => {
   const toReturn = [];
-  for(let i=0;i<100; i+=1){
+  for(let i=0;i<300; i+=1){
     toReturn.push(getFields(i));
   }
   return toReturn;
 }
-const Basic = () => (
+class Basic extends React.PureComponent {
+  render() {
+    return (
   <div>
     <h1>Sign Up</h1>
     <Formik
@@ -30,11 +43,6 @@ const Basic = () => (
         firstName: '',
         lastName: '',
         email: '',
-      }}
-      onSubmit={values => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-        }, 500);
       }}
       render={() => (
         <Form>
@@ -44,6 +52,8 @@ const Basic = () => (
       )}
     />
   </div>
-);
+  );
+  }
+}
 
 export default Basic;
