@@ -35,6 +35,7 @@
     "format": "prettier --trailing-comma es5 --single-quote --write 'src/**/*' 'test/**/*' 'README.md'",
     "precommit": "lint-staged",
     "storybook": "start-storybook -p 9001",
+    "build-docs": "build-storybook",
     "addc": "all-contributors add",
     "start-website": "cd website && yarn start",
     "build-website": "cd website && yarn install && yarn build",
