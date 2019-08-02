@@ -1,35 +1,49 @@
 import React from 'react';
-import { Formik, FastField, Form } from 'formik';
+import { Formik, Form } from 'formik';
+import Input from './Input';
 
 class FieldsForm extends React.PureComponent {
   constructor(props) {
     super(props);
   }
   render(){
-    const {i} = this.props;
+    const {i, handleChange, values={}} = this.props;
     return (
     <div key={i}>
-      <label htmlFor={`${i}firstName`}>First Name</label>
-      <FastField name={`${i}firstName`} placeholder="Jane" />
-
-      <label htmlFor={`${i}lastName`}>Last Name</label>
-      <FastField name={`${i}lastName`} placeholder="Doe" />
-
-      <label htmlFor={`${i}email`}>Email</label>
-      <FastField name={`${i}email`} placeholder="jane@acme.com" type="email" />
+      <Input
+        name={`${i}firstName`}
+        type="text"
+        ltext="First Name"
+        onChange={handleChange}
+        value={values[`${i}firstName`] || ''}
+      />
+      <Input
+        name={`${i}lastName`}
+        type='text'
+        ltext="Last Name"
+        onChange={handleChange}
+        value={values[`${i}lastName`] || ''}
+      />
+      <Input
+        name={`${i}email`}
+        type="email"
+        ltext="Email"
+        onChange={handleChange}
+        value={values[`${i}email`] || ''}
+        />
     </div>
     );
   }
 }
-const getFields = (i) => {
+const getFields = (i, props) => {
   return (
-    <FieldsForm i = {i}/>
+    <FieldsForm i = {i} {...props}/>
   );
 }
-const getMultipleFileds = () => {
+const getMultipleFileds = (props) => {
   const toReturn = [];
   for(let i=0;i<300; i+=1){
-    toReturn.push(getFields(i));
+    toReturn.push(getFields(i, props));
   }
   return toReturn;
 }
@@ -39,14 +53,10 @@ class Basic extends React.PureComponent {
   <div>
     <h1>Sign Up</h1>
     <Formik
-      initialValues={{
-        firstName: '',
-        lastName: '',
-        email: '',
-      }}
-      render={() => (
+      initialValues={{}}
+      render={(props) => (
         <Form>
-         {getMultipleFileds()}
+         {getMultipleFileds(props)}
          <button type="submit">Submit</button>
         </Form>
       )}
