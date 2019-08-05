@@ -2,10 +2,7 @@ import React from 'react';
 import { Formik, Form } from 'formik';
 import Input from './Input';
 
-class FieldsForm extends React.PureComponent {
-  constructor(props) {
-    super(props);
-  }
+class FieldsForm extends React.Component {
   render(){
     const {i, handleChange, values={}} = this.props;
     return (
@@ -47,7 +44,7 @@ const getMultipleFileds = (props) => {
   }
   return toReturn;
 }
-class Basic extends React.PureComponent {
+class Basic extends React.Component {
   render() {
     return (
   <div>

@@ -43,6 +43,7 @@
     "size": "size-limit"
   },
   "dependencies": {
+    "deep-equal": "^1.0.1",
     "deepmerge": "^2.1.1",
     "hoist-non-react-statics": "^3.3.0",
     "lodash": "^4.17.11",
